@@ -162,16 +162,43 @@
     border-radius: 50%;
     transition: background-color 0.3s ease-in-out;
   }
+  .icon__search{
+    width: 250px;
+    border: 1px solid var(--black4);
+    display: block;
+    border-radius: 25px;
+  }
+  .icon__search input{
+    float: left;
+    outline: none;
+    border: none;
+    width: 200px;
+    margin-top: 4px;
+    margin-bottom: 1px;
+    margin-left: 10px;
+    font-size: 20px;
+    color: black;
+  }
+  .icon__search button{
+    float: left;
+    width: 38px;
+    outline: none;
+    border: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size:26px;
+  }
+  
+  .nav__icons .icon__search:not(:last-child) {
+    margin-right: 1rem;
+  }
   
   .nav__icons .icon__item:link,
   .nav__icons .icon__item:visited {
     color: var(--black);
   }
   
-  .nav__icons .icon__item:hover {
-    background-color: var(--orange);
-    border: 1px solid var(--black);
-  }
+  
   
   .nav__icons .icon__item:not(:last-child) {
     margin-right: 1rem;
@@ -1792,7 +1819,7 @@
     border: 1px solid var(--black);
   }
   
-  .product-details__btn svg {
+  .product-details__btn i {
     width: 1.9rem;
     height: 1.9rem;
     transition: 0.3s;
@@ -1851,6 +1878,7 @@
   
   .rating {
     margin-right: 1rem;
+    color: yellow;
   }
   
   .product__review a:link,
@@ -1930,7 +1958,7 @@
     border: 1px solid var(--primaryColor);
   }
   
-  .input-counter svg {
+  .input-counter i {
     width: 1.8rem;
     height: 1.8rem;
     fill: var(--grey3);
@@ -2329,10 +2357,113 @@
       padding: 1rem 0;
     }
   
-    .input-counter svg {
+    .input-counter i {
       width: 1.5rem;
       height: 1.5rem;
     }
   }
-  
-  
+
+
+  /* -----------
+        CART 
+  ---------------*/
+
+  #main{
+    position: relative;
+    left: 0;
+    top: 50px;
+  }
+  #main #contain{
+    margin: 30px auto;
+	  height: 900px;
+	  width: 90%;
+	  border: 2px solid #000;
+	  padding: 20px;
+  }
+
+  #main #contain #bill{
+    display: none;
+  }
+  #main #contain #bill h2{
+    text-align: center;
+  }
+  #main #contain #bill .billcontent{
+    border:  1px solid #000;
+    padding: 20px;
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  } 
+  #main #contain #bill .billcontent div:nth-child(1){
+    width: 40%;
+    text-align: left;
+  }
+  #main #contain #bill .billcontent div{
+    width: 20%;
+    text-align: center;
+  }
+  #main #contain #carttable{
+    border-spacing: 0;
+    width: 100%;
+  }
+  #main #contain #carttable th, td{
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    vertical-align: middle;
+  }
+  #main #contain #carttable td:not(:nth-child(2)){
+    width: 150px;
+    text-align: center;
+  }
+  #main #contain #carttable td img{
+    height: 50px;
+  }
+  #main #contain #carttable td button{
+    height: auto;
+    width: 30px;
+    line-height: 25px;
+    font-size: 15pt;
+    text-align: center;
+    border: 2px solid #000;
+    background: none;
+    cursor: pointer;
+    outline: none;
+  }
+  #main #contain #carttable td button:active{
+    border: 2px solid #ff4700;
+    color: #ff4700;
+  }
+  #main #contain #carttable td input{
+    height: 25px;
+    width: 50px;
+    font-size: 12pt;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+    background: none;
+  }
+  #main #contain .total{
+    text-align: right;
+    color: #ff4700;
+    font-weight: bold;
+    height: 50px;
+    font-size: 12pt;
+    margin-top: 20px;
+  }
+  #main #contain>button{
+    height: 50px;
+    color: #fff;
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 0 10px;
+    border: 2px solid #000;
+    background: #000;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  #main #contain>button:hover{
+    color: #000;
+    background: #fff;
+  }
